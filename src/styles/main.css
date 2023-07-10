@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Berg;
+    src: url('BergWesternRegular.ttf') format('truetype'),
+         url('BergWesternRegular.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Berg;
+}
+
+:root {
+    --mainColor: #800000;
+    --bgdColor: #0B0E14;
+    --grayColor: #646E78;
+    --accentColor: #1F7A8C;
+    --whiteColor: #FFFCF2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
+    padding: 0 2rem;
+    background-color: var(--bgdColor);
+    color: var(--whiteColor);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: var(--whiteColor);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--mainColor);
+}
+
+header.navButton {
+    padding: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--whiteColor);
+    visibility: hidden;
+}
+
+@media only screen and (max-widht: 760px) {
+    header.navButton {
+        visibility: visible;
+    }
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: var(--grayColor);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+}

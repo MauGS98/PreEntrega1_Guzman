@@ -1,16 +1,16 @@
+import Navbar from "../navbar"
+
 function Layout () {
     return (
-        <div>
-            <header>
-                header
-            </header>
+        <>
+            <Navbar/>
             <main>
-                main
+                Cuerpo del proyecto
             </main>
             <footer>
-                footer
+                Footer
             </footer>
-        </div>
+        </>
     )
 }
 
