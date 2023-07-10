@@ -1,7 +1,7 @@
 @font-face {
     font-family: Berg;
-    src: url('BergWesternRegular.ttf') format('truetype'),
-         url('BergWesternRegular.woff') format('woff');
+    src: url('./assets/BergWesternRegular.ttf') format('truetype'),
+         url('./assets/BergWesternRegular.woff') format('woff');
 }
 
 * {
@@ -9,6 +9,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Berg;
+}
+
+body {
+    background-color: var(--grayColor);
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
@@ -24,7 +32,6 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 7rem;
-    padding: 0 0 0 3rem;
     background-color: var(--bgdColor);
     color: var(--whiteColor);
 }
@@ -32,12 +39,32 @@ header {
 .logoImg {
     height: 5rem;
     width: auto;
+    padding: 0 3rem;
+}
+
+.links {
+    position: absolute;
+    top: -400px;
+    margin: auto;
+    text-align: center;
+}
+
+.links.active {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    top: 7rem;
+    padding-top: 7rem;
+    background-color: var(--bgdColor);
 }
 
 nav a {
-    margin: 0 3rem;
+    margin: 0 2rem;
     color: var(--whiteColor);
-    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -53,5 +80,15 @@ nav a:hover {
     border: none;
     outline: none;
     color: var(--whiteColor);
-    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .navButton {
+        display: none;
+    }
+
+    .links {
+        position: initial;
+        margin: 0;
+    }
 }

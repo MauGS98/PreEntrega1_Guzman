@@ -1,19 +1,21 @@
-import { useRef } from 'react';
+import { useState } from 'react';
+import Hamburger from 'hamburger-react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './styles.css';
 
 function Navbar () {
-    const navRef = useRef();
-    const showNavbar = () => {
-        navRef.current.classlist.toggle("responsiveNav")
+    const [clicked, setClicked] = useState(false);
+    const handleClick = () => {
+        setClicked(!clicked)
     }
+
+    const [isOpen, setOpen] = useState(false)
 
     return (
         <header>
             <a href="./index.html">
                 <img className='logoImg' src="./src/assets/placaBlanca.svg" alt="LOGO" />
             </a>
-            <nav ref={navRef}>
+            <nav className={`links ${clicked ? 'active' : ''}`}>
                 <a href="#">
                     inicio
                 </a>
@@ -26,13 +28,10 @@ function Navbar () {
                 <a href="#">
                     contacto
                 </a>
-                <button className='navButton navCloseButton' onClick={showNavbar}>
-                    <i className="bi bi-caret-up-fill"></i>
-                </button>
             </nav>
-            <button className='navButton navOpenButton' onClick={showNavbar}>
-                <i className="bi bi-caret-down-fill"></i>
-            </button>
+            <div className="navButton" onClick={handleClick}>
+                <Hamburger toggled={isOpen} toggle={setOpen}/>
+            </div>
         </header>
     )
 }
