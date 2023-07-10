@@ -1,3 +1,5 @@
+/* Estilos generales de pagina */
+
 @font-face {
     font-family: Berg;
     src: url('./assets/BergWesternRegular.ttf') format('truetype'),
@@ -26,6 +28,8 @@ a {
     --accentColor: #1F7A8C;
     --whiteColor: #FFFCF2;
 }
+
+/* Estilos de Navbar */
 
 header {
     display: flex;
@@ -91,4 +95,66 @@ nav a:hover {
         position: initial;
         margin: 0;
     }
+}
+
+/* Estilo para carrito de compra */
+
+.cart {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.cart:hover {
+    color: var(--mainColor);
+    transition: .5s;
+}
+
+/* Estilos para greeting */
+
+.greetCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 4rem 2rem;
+    background-color: var(--accentColor);
+}
+
+.greetTittle {
+    color: var(--bgdColor);
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    background: linear-gradient(to bottom, transparent 60%, #bbbbbb 40%);
+}
+
+.greetParagraph {
+    color: var(--bgdColor);
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos de footer */
+
+footer {
+    background-color: var(--bgdColor);
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--accentColor);
+    text-decoration: none;
+    margin: 0 1.5rem;
+}
+
+/* Estilos para el texto de copyright en el footer */
+    footer .copyright {
+    color: var(--grayColor);
+    margin-top: 1.5rem;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Hamburger from 'hamburger-react';
+import CartWidget from '../CartWidget';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Navbar () {
@@ -31,6 +32,9 @@ function Navbar () {
             </nav>
             <div className="navButton" onClick={handleClick}>
                 <Hamburger toggled={isOpen} toggle={setOpen}/>
+            </div>
+            <div className="cart">
+                <CartWidget numberOfItems = "2"/>
             </div>
         </header>
     )
