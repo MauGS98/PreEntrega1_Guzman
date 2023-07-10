@@ -23,48 +23,35 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10rem;
-    padding: 0 2rem;
+    height: 7rem;
+    padding: 0 0 0 3rem;
     background-color: var(--bgdColor);
     color: var(--whiteColor);
 }
 
+.logoImg {
+    height: 5rem;
+    width: auto;
+}
+
 nav a {
-    margin: 0 2rem;
+    margin: 0 3rem;
     color: var(--whiteColor);
     text-decoration: none;
 }
 
 nav a:hover {
     color: var(--mainColor);
+    transition: .5s;
 }
 
-header.navButton {
+.navButton {
     padding: 1rem;
+    font-size: 25px;
     cursor: pointer;
     background: transparent;
     border: none;
     outline: none;
     color: var(--whiteColor);
-    visibility: hidden;
-}
-
-@media only screen and (max-widht: 760px) {
-    header.navButton {
-        visibility: visible;
-    }
-    header nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        background-color: var(--grayColor);
-        transition: 1s;
-        transform: translateY(-100vh);
-    }
+    display: none;
 }

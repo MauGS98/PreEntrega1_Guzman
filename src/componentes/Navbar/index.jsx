@@ -1,29 +1,30 @@
 import { useRef } from 'react';
-import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './styles.css';
 
 function Navbar () {
     const navRef = useRef();
     const showNavbar = () => {
-        navRef.current.classlist.toggle("expandedNav")
+        navRef.current.classlist.toggle("responsiveNav")
     }
 
     return (
         <header>
             <a href="./index.html">
-                <img src="./src/assets/placaBlanca.svg" alt="LOGO" />
+                <img className='logoImg' src="./src/assets/placaBlanca.svg" alt="LOGO" />
             </a>
             <nav ref={navRef}>
                 <a href="#">
-                    Inicio
+                    inicio
                 </a>
                 <a href="#">
-                    Inventario
+                    inventario
                 </a>
                 <a href="#">
-                    Quienes somos
+                    quienes somos
                 </a>
                 <a href="#">
-                    Contacto
+                    contacto
                 </a>
                 <button className='navButton navCloseButton' onClick={showNavbar}>
                     <i className="bi bi-caret-up-fill"></i>
